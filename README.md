@@ -1,4 +1,4 @@
-# Function&errors Metacrafters
+# Function & errors Metacrafters
 
 ## Overview
 
