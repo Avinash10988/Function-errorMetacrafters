@@ -8,11 +8,11 @@ This project showcases a simple Ethereum smart contract that implements the `req
 
 The smart contract includes the following functions:
 
-1. `setValueWithRequirement(uint _value)`: Allows setting the value of a state variable, ensuring that the value is greater than zero using the `require()` statement.
+1. `setPositiveValue(uint _value)`: Allows setting the value of a state variable, ensuring that the value is greater than zero using the `require()` statement.
 
-2. `setValueWithAssertion(uint _newValue)`: Doubles the value of a state variable and verifies the new value satisfies a specific invariant condition using the `assert()` statement.
+2. `function increaseValueWithAssertion(uint _newValue)`: Doubles the value of a state variable and verifies the new value satisfies a specific invariant condition using the `assert()` statement.
 
-3. `withdrawWithRevert()`: Transfers the entire value of the state variable to the caller and handles specific cases, such as when the value is zero, using the `revert()` statement.
+3. `function withdrawWithZeroCheck()`: Transfers the entire value of the state variable to the caller and handles specific cases, such as when the value is zero, using the `revert()` statement.
 
 ## Getting Started
 
@@ -34,11 +34,11 @@ To interact with the smart contract, you need an Ethereum development environmen
 
 Once the contract is deployed, you can interact with it through its functions:
 
-1. Call `setValueWithRequirement(_value)` to set a new numerical value, ensuring it is greater than zero.
+1. Call `function setPositiveValue(uint _value)` to set a new numerical value, ensuring it is greater than zero.
 
-2. Call `setValueWithAssertion(_newValue)` to double the current value and verify the invariant condition.
+2. Call `function increaseValueWithAssertion(uint _newValue)` to double the current value and verify the invariant condition.
 
-3. Call `withdrawWithRevert()` to withdraw the entire value and handle exceptional cases.
+3. Call `function withdrawWithZeroCheck()` to withdraw the entire value and handle exceptional cases.
 
 ## Security Considerations
 
