@@ -10,7 +10,8 @@ contract SmartContract {
 
     function increaseValueWithAssertion(uint _newValue) external {
         uint diff = _newValue - value;
-        assert(diff > 0 && diff == value);
+        uint expectedDiff = 100; 
+        assert(diff == expectedDiff);
         
         value = _newValue;
     }
